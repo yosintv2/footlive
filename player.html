@@ -240,6 +240,72 @@ $(document).ready(function() {$(&#39;img#closed&#39;).click(function(){$(&#39;#b
 </script>
 </div>
 </div>
-</div></div>
+</div>
 
  
+ 
+<style>
+  /* Styling for the ads container */
+  .ads-container {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: none; /* Initially hidden */
+  }
+
+  /* Styling for the close button */
+  .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: #888;
+  }
+
+  /* Styling for the content inside the ads container */
+  .ads-content {
+    text-align: center;
+  }
+</style>
+
+
+<div class="ads-container" id="adsContainer">
+<span class="close-btn" id="closeBtn">&times;</span>
+<div class="ads-content">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5525538810839147"
+     crossorigin="anonymous"></script>
+<ins class='adsbygoogle' data-ad-client='ca-pub-5525538810839147' data-ad-slot='5912194004' style='display:inline-block;width:300px;height:250px'/>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+ 
+</div>
+</div>
+
+<script>
+  // Function to show the ads container
+  function showAdsContainer() {
+    document.getElementById('adsContainer').style.display = 'block';
+  }
+
+  // Function to hide the ads container
+  function hideAdsContainer() {
+    document.getElementById('adsContainer').style.display = 'none';
+  }
+
+  // Show the ads container initially
+  showAdsContainer();
+
+  // Schedule showing the ads container every 5 minutes
+  setInterval(showAdsContainer, 1 * 60 * 1000);
+
+  // Add click event listener to the close button
+  document.getElementById('closeBtn').addEventListener('click', hideAdsContainer);
+</script>
