@@ -243,8 +243,10 @@ $(document).ready(function() {$(&#39;img#closed&#39;).click(function(){$(&#39;#b
 </div>
 
  
- 
-<style>
+
+
+
+ <style>
   /* Styling for the ads container */
   .ads-container {
     position: fixed;
@@ -262,10 +264,13 @@ $(document).ready(function() {$(&#39;img#closed&#39;).click(function(){$(&#39;#b
   /* Styling for the close button */
   .close-btn {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: -20px;
+    right: -5px;
     cursor: pointer;
     color: #888;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
   }
 
   /* Styling for the content inside the ads container */
@@ -273,20 +278,22 @@ $(document).ready(function() {$(&#39;img#closed&#39;).click(function(){$(&#39;#b
     text-align: center;
   }
 </style>
-
+</head>
+<body>
 
 <div class="ads-container" id="adsContainer">
-<span class="close-btn" id="closeBtn">&times;</span>
-<div class="ads-content">
+  <span class="close-btn" id="closeBtn">&times;</span>
+  <div class="ads-content">
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5525538810839147"
+   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5525538810839147"
      crossorigin="anonymous"></script>
 <ins class='adsbygoogle' data-ad-client='ca-pub-5525538810839147' data-ad-slot='5912194004' style='display:inline-block;width:300px;height:250px'/>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
  
-</div>
+  </div>
 </div>
 
 <script>
