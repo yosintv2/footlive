@@ -246,6 +246,7 @@ $(document).ready(function() {$(&#39;img#closed&#39;).click(function(){$(&#39;#b
 
 
 
+
  <style>
   /* Styling for the ads container */
   .ads-container {
@@ -265,7 +266,7 @@ $(document).ready(function() {$(&#39;img#closed&#39;).click(function(){$(&#39;#b
   .close-btn {
     position: absolute;
     top: -20px;
-    right: -5px;
+    right: 10px;
     cursor: pointer;
     color: #888;
     background-color: #f0f0f0;
@@ -282,6 +283,10 @@ $(document).ready(function() {$(&#39;img#closed&#39;).click(function(){$(&#39;#b
 <body>
 
 <div class="ads-container" id="adsContainer">
+  <span class="close-btn" id="closeBtn">&times;</span>
+  <div class="ads-content">
+
+   <div class="ads-container" id="adsContainer">
   <span class="close-btn" id="closeBtn">&times;</span>
   <div class="ads-content">
 
@@ -307,11 +312,11 @@ $(document).ready(function() {$(&#39;img#closed&#39;).click(function(){$(&#39;#b
     document.getElementById('adsContainer').style.display = 'none';
   }
 
-  // Show the ads container initially
-  showAdsContainer();
+  // Show the ads container after 1 minute of page load
+  setTimeout(showAdsContainer, 1 * 60 * 1000);
 
   // Schedule showing the ads container every 5 minutes
-  setInterval(showAdsContainer, 1 * 60 * 1000);
+  setInterval(showAdsContainer, 5 * 60 * 1000);
 
   // Add click event listener to the close button
   document.getElementById('closeBtn').addEventListener('click', hideAdsContainer);
